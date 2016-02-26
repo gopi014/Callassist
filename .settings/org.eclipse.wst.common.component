@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="CallAssistance">
+        <wb-resource deploy-path="/" source-path="/apps/Call_Assist/common"/>
+        <wb-resource deploy-path="/" source-path="/apps/Call_Assist/android"/>
+        <wb-resource deploy-path="/" source-path="/apps/Call_Assist/iphone"/>
+        <property name="context-root" value="CallAssistance"/>
+    </wb-module>
+</project-modules>

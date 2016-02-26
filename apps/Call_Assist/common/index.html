@@ -1,0 +1,199 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CallAssist</title>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+<!--
+    			<link rel="shortcut icon" href="images/favicon.png">
+    			<link rel="apple-touch-icon" href="images/apple-touch-icon.png"> 
+    		-->
+<link rel="stylesheet" href="css/main.css">
+<script>
+	window.$ = window.jQuery = WLJQ;
+</script>
+
+<link rel="stylesheet" href="themes/ibm.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+<link rel="stylesheet" href="themes/jquery-confirm.min.css" /> 
+<link rel="stylesheet"
+	href="themes/jquery.mobile.structure-1.4.5.min.css" />
+ <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaKx9iQrPQuOmAc2DkMRgjFdT0_XTdbmE&sensor=false&v=3&libraries=geometry"></script>	 	
+  --> <!--<script type="text/javascript" src="https://maps.google.cn/maps/api/js?key=AIzaSyBaKx9iQrPQuOmAc2DkMRgjFdT0_XTdbmE&sensor=false&v=3&libraries=geometry"></script>	 	
+ --><script src="themes/jquery-1.11.1.min.js"></script>
+<script src="themes/jquery.mobile-1.4.5.min.js"></script>
+<script src="themes/jquery.mobile.dynamic.popup.js"></script>
+<script src="themes/jquery-confirm.min.js"></script>
+<script src="js/custom.js"></script>
+
+</head>
+<body >
+	
+	<!-- Do’s & Don’ts Start -->
+	<div id="do-dont" data-role="page" data-theme="d">
+		<!-- Navigation Panel Start -->
+		<!-- <div data-role="panel" data-position-fixed="true"
+			data-position="right" data-display="push" data-theme="d"
+			id="nav-panel02">
+			<ul data-role="listview">
+				<li data-icon="delete"><a href="#"
+					class="ui-nodisc-icon grey-bg" data-rel="close">Close menu</a></li>
+				<li><a href="#home" class="ui-nodisc-icon grey-bg">Home</a></li>
+				<li><a href="#country" class="travelsimplans ui-nodisc-icon grey-bg">Travel
+						SIM Plans</a></li>
+				<li class=""><a href="#do-dont" class="ui-nodisc-icon grey-bg" onclick="CallAssistance();">Call
+						Assistance</a></li>
+				<li><a href="#login" class="ui-nodisc-icon grey-bg">Logout</a></li>
+			</ul>
+		</div> -->
+		<!-- Navigation Panel End -->
+
+		<div data-role="header" data-position="fixed">
+			<a href="#home"   data-iconpos="notext"
+				data-shadow="false" data-iconshadow="false"
+				class="ui-btn-left ui-nodisc-icon logoicon"><img src="images/icon.png"  style="float: left;
+    width: 38px;
+    height: 37px;
+    margin-top: -9.2px;
+    margin-left: -10px;" /></a>
+			<h1 >Call Assist</h1>
+			
+		<!-- 	<a href="#" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-location">Retry</a>
+	 -->	</div>
+		<div data-role="content">
+
+<!-- <a href="tel:08044088778p2#p19602690#p16051988#"> host </a>
+
+<a href="tel:08044088778;ext=19602690#"> pract </a> -->
+<p id="notification" style="display:none;"></p>
+			<!-- Select and Accordion Start -->
+			<div class="ui-body ui-body-do-dont ui-corner-all">
+         <h4 id="dosheading">Preferred Calling Options</h4>
+				<div class="custom-box">
+				
+					<select name="countrySelectdo"  
+						data-theme="e" class="ui-cust-select" id="countrySelectdo" onchange="getdosanddonts();" >
+						<!-- <option selected>Singapore</option>
+						<option value="option1">option1</option>
+						<option value="option2">option2</option>
+						<option value="option3">option3</option>
+						<option value="option4">option4</option>
+						<option value="option5">option5</option> -->
+					</select>
+				</div>
+
+				<!-- Do’s & Don’ts Accordion Start -->
+				<div data-role="collapsible" data-collapsed-icon="carat-d"
+					data-expanded-icon="carat-u" data-iconpos="right"
+					class="ui-nodisc-icon">
+					<h4 class="blue-grdnt" data-theme="f">IBM Office</h4>
+					<div id="officedos">
+						
+					</div>
+	
+					
+				</div>
+
+
+				<div data-role="collapsible" data-collapsed-icon="carat-d"
+					data-expanded-icon="carat-u" data-iconpos="right"
+					class="ui-nodisc-icon">
+					<h4 class="blue-grdnt" data-theme="f">Home Office</h4>
+					<div id="homeofficedos">
+					</div>
+				</div>
+
+
+				<div data-role="collapsible" data-collapsed-icon="carat-d"
+					data-expanded-icon="carat-u" data-iconpos="right"
+					class="ui-nodisc-icon">
+					<h4 class="blue-grdnt" data-theme="f">Mobile Phone</h4>
+					<div id="mobilephonedos">
+				    </div>
+				</div>
+
+				<div data-role="collapsible" data-collapsed-icon="carat-d"
+					data-expanded-icon="carat-u" data-iconpos="right"
+					class="ui-nodisc-icon">
+					<h4 class="blue-grdnt" data-theme="f">In the Hotel</h4>
+					<div id="hoteldos">
+					</div>
+				</div>
+					<div data-role="collapsible" data-collapsed-icon="carat-d"
+					data-expanded-icon="carat-u" data-iconpos="right"
+					class="ui-nodisc-icon">
+					<h4 class="blue-grdnt" data-theme="f">Steps for dialing out external number</h4>
+					<div id="dialext">
+					</div>
+				</div>
+				
+				<div data-role="collapsible" data-collapsed-icon="carat-d"
+					data-expanded-icon="carat-u" data-iconpos="right"
+					class="ui-nodisc-icon">
+					<h4 class="blue-grdnt" data-theme="f">List of short dials</h4>
+					<div id="shortdial">
+					</div>
+				</div>
+				<!-- Do’s & Don’ts Accordion End -->
+
+
+			</div>
+			<!-- Select and Accordion End -->
+	
+		</div>
+	</div>
+	<!-- Do’s & Don’ts End -->
+
+
+
+	<!-- Travel App Start -->
+	<!-- <div id="home" data-role="page" data-theme="d">
+		Navigation Panel Start
+		<div data-role="panel" data-position-fixed="true"
+			data-position="right" data-display="push" data-theme="d"
+			id="nav-panel01">
+			<ul data-role="listview">
+				<li data-icon="delete"><a href="#"
+					class="ui-nodisc-icon grey-bg" data-rel="close">Close menu</a></li>
+				<li><a href="#" class="ui-nodisc-icon grey-bg">Home</a></li>
+				<li><a href="#country"  class="travelsimplans ui-nodisc-icon grey-bg">Travel
+						SIM Plans</a></li>  
+				<li><a href="#do-dont" class="ui-nodisc-icon grey-bg" onclick="CallAssistance();">Call
+						Assistance</a></li>
+				<li><a href="#login" class="ui-nodisc-icon grey-bg">Logout</a></li>
+			</ul>
+		</div>
+		Navigation Panel End
+
+		<div data-role="main" class="ui-content" style="padding:0em;">
+        <div class="ui-grid-b" >
+         <div class="ui-block-a travelimage travelsimplans" data-vertical><p style="display: table-cell;vertical-align: bottom;height: 161px;width: 1400px;" data-vertical>Travel SIM<br clear="none"></br>Plans</p></div>
+     <div class="ui-block-a travelimage travelsimplans" data-vertical><span style="font-family: Helvetica95 HelveticaBold;">Travel SIM</span><span style="display:block;font-family: Helvetica95 HelveticaBold;">Plans</span><span style="color:red;font-size:20px">*(For India only)</span></div>
+   <div class="ui-block-a callingimage" data-vertical onclick="CallAssistance();"><span style="font-family: Helvetica95 HelveticaBold;">Calling Assistance</span></div>
+      
+    </div>
+  </div>
+		
+	</div> -->
+	<!-- Travel App End -->
+
+
+
+	<script src="js/initOptions.js"></script>
+		<script src="js/auth/BonD.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/auth/messages.js"></script>
+	 
+	<script src="js/MyTravel.js"></script>
+	<script src="js/getlocation.js"></script>
+	
+</body>
+
+
+</html>
+
+
+
+

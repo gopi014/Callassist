@@ -1,0 +1,127 @@
+@font-face {
+    font-family: Helvetica95;
+    src: url(fonts/Helvetica95Black.woff);
+}
+@font-face {
+    font-family: HelveticaBold;
+    src: url(fonts/HelveticaBold.woff);
+}
+.travelsimplans{
+	
+	
+}
+.ui-listview > li h1, .ui-listview > li h2, .ui-listview > li h3, .ui-listview > li h4, .ui-listview > li h5, .ui-listview > li h6 {
+    white-space: normal !important;
+    text-align: left;
+}
+.ui-listview > li p {
+	font-size:14px !important;
+	white-space: normal !important;
+	text-align: left;
+}
+.ui-listview > li p >a{
+	text-decoration: none;
+	word-wrap: break-word !important;
+}
+table{
+
+width: 100%;
+text-align: left;
+font-size:12px !important;
+table-layout: fixed;
+}
+th {
+	color: white !important;
+	background: #1C4A70;
+    border-bottom: 1px solid #d6d6d6;
+}
+
+tr:nth-child(even) {
+    background: #d6d6d6;
+}
+tr:nth-child(odd) {
+    background: #E3FFFC;
+}
+td {
+	padding-left: 5px;
+}
+.ui-header, .ui-footer{
+	background: transparent linear-gradient(to bottom, #02AAE1 0%, #004A80 100%) repeat scroll 0% 0% !important;
+	
+}
+.ui-page-theme-d .ui-bar-inherit{
+	    background-color: #004A80 !important;
+}
+.ui-block-a{
+margin-bottom:2px  !important;
+width: 100% !important;
+background: transparent linear-gradient(to bottom, #02AAE1 0%, #004A80 100%) repeat scroll 0% 0% !important;
+text-align: center;
+text-shadow: 4px 1px #000;
+color: white;
+font-size:44px !important;
+font-weight:bold;
+font-family:fantasy;
+
+}
+
+ 
+.ui-listview li{
+	white-space: normal !important;
+}
+.wrapword{
+white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+white-space: -webkit-pre-wrap; /*Chrome & Safari */ 
+white-space: -pre-wrap;      /* Opera 4-6 */
+white-space: -o-pre-wrap;    /* Opera 7 */
+white-space: pre-wrap;       /* css-3 */
+word-wrap: break-word;       /* Internet Explorer 5.5+ */
+word-break: break-all;
+white-space: normal;
+}
+/*#home .ui-panel-wrapper{
+	background-color: #5E6B8C;
+}*/
+.ui-collapsible-content {
+	padding: .1em .1em !important;
+
+}
+
+.ui-listview1 > li p{
+	text-align: left !important;
+}
+ .iconDetails {
+ margin-left:2%;
+float:left; 
+height:40px;
+width:40px;	
+} 
+.container2 {
+	width:100%;
+	height:auto;
+	padding:2%;
+}
+[data-role="panel"] ul{
+	margin-top:20px !important;
+}
+.ui-footer h1 {
+	font-family: san-serif !important;
+}
+#dosheading{
+	margin-top:21.1px !important;
+	text-align: center !important;
+}
+
+.logoicon{
+
+
+border: none !important;
+    top: 2px !important;
+    border-radius: 50px !important;
+    height: 18px !important;
+    width: 16px !important;
+    }
+    
+    .ui-header h1{
+    text-shadow: none !important;
+    }
